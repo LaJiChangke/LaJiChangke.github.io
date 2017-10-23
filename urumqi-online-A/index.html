@@ -3,21 +3,23 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>辣鸡CK的博客</title>
+  <title>【ACM-ICPC2017 Urumqi Online】A. Banana 题解 | 辣鸡CK的博客</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Very Stupid CK">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辣鸡CK的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="题目地址https://nanti.jisuanke.com/t/16950 题目大意有 $N$ 只猴子，每只猴子想吃几种香蕉；有 $M$ 个供应商，每个可以供应几种香蕉，但一种只能供应给一个猴子。求分配方案使得所有猴子满意，保证有解。">
+<meta name="keywords" content="ACM,Urumqi,模拟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【ACM-ICPC2017 Urumqi Online】A. Banana 题解">
+<meta property="og:url" content="http://yoursite.com/urumqi-online-A/index.html">
 <meta property="og:site_name" content="辣鸡CK的博客">
-<meta property="og:description" content="Very Stupid CK">
+<meta property="og:description" content="题目地址https://nanti.jisuanke.com/t/16950 题目大意有 $N$ 只猴子，每只猴子想吃几种香蕉；有 $M$ 个供应商，每个可以供应几种香蕉，但一种只能供应给一个猴子。求分配方案使得所有猴子满意，保证有解。">
+<meta property="og:updated_time" content="2017-10-23T01:49:14.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="辣鸡CK的博客">
-<meta name="twitter:description" content="Very Stupid CK">
+<meta name="twitter:title" content="【ACM-ICPC2017 Urumqi Online】A. Banana 题解">
+<meta name="twitter:description" content="题目地址https://nanti.jisuanke.com/t/16950 题目大意有 $N$ 只猴子，每只猴子想吃几种香蕉；有 $M$ 个供应商，每个可以供应几种香蕉，但一种只能供应给一个猴子。求分配方案使得所有猴子满意，保证有解。">
   
     <link rel="alternative" href="/atom.xml" title="辣鸡CK的博客" type="application/atom+xml">
   
@@ -187,9 +189,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-urumqi-online-A" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-urumqi-online-A" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/urumqi-online-A/" class="article-date">
@@ -205,108 +205,107 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/urumqi-online-A/">
-        【ACM-ICPC2017 Urumqi Online】A. Banana 题解
-        
-      </a>
+    <h1 class="article-title" itemprop="name">
+      【ACM-ICPC2017 Urumqi Online】A. Banana 题解
+      
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Urumqi/">Urumqi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模拟/">模拟</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><p><a href="https://nanti.jisuanke.com/t/16950" target="_blank" rel="external">https://nanti.jisuanke.com/t/16950</a></p>
 <h1 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h1><p>有 $N$ 只猴子，每只猴子想吃几种香蕉；有 $M$ 个供应商，每个可以供应几种香蕉，但一种只能供应给一个猴子。求分配方案使得所有猴子满意，保证有解。</p>
+<a id="more"></a>
+<p>Bananas are the favoured food of monkeys.</p>
+<p>In the forest, there is a Banana Company that provides bananas from different places.</p>
+<p>The company has two lists.</p>
+<p>The first list records the types of bananas preferred by different monkeys, and the second one records the types of bananas from different places.</p>
+<p>Now, the supplier wants to know, whether a monkey can accept at least one type of bananas from a place.</p>
+<p>Remenber that, there could be more than one types of bananas from a place, and there also could be more than one types of bananas of a monkey’s preference.</p>
+<h2 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h2><p>The first line contains an integer $T$, indicating that there are $T$ test cases.</p>
+<p>For each test case, the first line contains two integers $N$ and $M$, representing the length of the first and the second lists respectively.</p>
+<p>In the each line of following $N$ lines, two positive integers $i, j$ indicate that the $i$-th monkey favours the $j$-th type of banana.</p>
+<p>In the each line of following $M$ lines, two positive integers $j, k$ indicate that the $j$-th type of banana could be find in the $k$-th place.</p>
+<p>All integers of the input are less than or equal to $50$.</p>
+<h2 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h2><p>For each test case, output all the pairs $x, y$ that the $x$-th monkey can accept at least one type of bananas from the $y$-th place.</p>
+<p>These pairs should be outputted as ascending order. That is say that a pair of $x, y$ which owns a smaller $x$ should be output first.</p>
+<p>If two pairs own the same $x$, output the one who has a smaller $y$ first.</p>
+<p>And there should be an empty line after each test case.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><pre><code>1
+6 4
+1 1
+1 2
+2 1
+2 3
+3 3
+4 1
+1 1
+1 3
+2 2
+3 3
+</code></pre><h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><pre><code>1 1
+1 2
+1 3
+2 1
+2 3
+3 3
+4 1
+4 3
+</code></pre>
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ACM/">ACM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Urumqi/">Urumqi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模拟/">模拟</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a  href="/urumqi-online-A/#more">阅读全文 >></a>
-        </p>
-      
     
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/hello-world/" class="article-date">
-  	<time datetime="2017-10-22T15:33:15.690Z" itemprop="datePublished">2017-10-22</time>
-</a>
+<div class="ds-share share" data-thread-key="urumqi-online-A" data-title="【ACM-ICPC2017 Urumqi Online】A. Banana 题解" data-url="http://yoursite.com/urumqi-online-A/"  data-images="http://lajichangke.github.io/img/funny.png" data-content="【ACM-ICPC2017 Urumqi Online】A. Banana 题解">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/hello-world/">
-        Hello World
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello, World!"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
+ </div>
+ 
 
 
 
 
 
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -330,8 +329,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
