@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>【Codeforces Round | 辣鸡CK的博客</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="题目链接http://codeforces.com/contest/877/problem/A 题目大意给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。">
+<meta name="keywords" content="codeforces,字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Codeforces Round">
+<meta property="og:url" content="http://yoursite.com/CF877-A/index.html">
+<meta property="og:site_name" content="辣鸡CK的博客">
+<meta property="og:description" content="题目链接http://codeforces.com/contest/877/problem/A 题目大意给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。">
+<meta property="og:updated_time" content="2017-10-24T00:54:28.277Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Codeforces Round">
+<meta name="twitter:description" content="题目链接http://codeforces.com/contest/877/problem/A 题目大意给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。">
+  
+    <link rel="alternative" href="/atom.xml" title="辣鸡CK的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://lajichangke.github.io/img/funny.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  
+</head>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://lajichangke.github.io/img/funny.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Ke Chang</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Very Stupid CK</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/about">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/LaJiChangke" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/chang-ke-23-59" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto:ck_acm@pku.edu.cn" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=810776107&site=qq&menu=yes" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/ACM/" style="font-size: 10px;">ACM</a> <a href="/tags/Urumqi/" style="font-size: 10px;">Urumqi</a> <a href="/tags/codeforces/" style="font-size: 10px;">codeforces</a> <a href="/tags/字符串/" style="font-size: 10px;">字符串</a> <a href="/tags/模拟/" style="font-size: 10px;">模拟</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://222.88.153.160:8001/blogof/foolmike">Mike大佬</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Ke Chang</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://lajichangke.github.io/img/funny.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Ke Chang</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Very Stupid CK</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/about">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/LaJiChangke" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/chang-ke-23-59" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto:ck_acm@pku.edu.cn" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=810776107&site=qq&menu=yes" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-CF877-A" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/CF877-A/" class="article-date">
+  	<time datetime="2017-10-24T00:42:42.998Z" itemprop="datePublished">2017-10-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【Codeforces Round
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="http://codeforces.com/contest/877/problem/A" target="_blank" rel="external">http://codeforces.com/contest/877/problem/A</a></p>
+<h1 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h1><p>给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。</p>
+<a id="more"></a>
+<h1 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h1><p>One day Alex was creating a contest about his friends, but accidentally deleted it. Fortunately, all the problems were saved, but now he needs to find them among other problems.</p>
+<p>But there are too many problems, to do it manually. Alex asks you to write a program, which will determine if a problem is from this contest by its name.</p>
+<p>It is known, that problem is from this contest if and only if its name contains one of Alex’s friends’ name <strong>exactly once</strong>. His friends’ names are “<code>Danil</code>“, “<code>Olya</code>“, “<code>Slava</code>“, “<code>Ann</code>“ and “<code>Nikita</code>“.</p>
+<p><strong>Names are case sensitive.</strong></p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>The only line contains string from lowercase and uppercase letters and “<code>_</code>“ symbols of length, not more than $100$ — the name of the problem.</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Print “<code>YES</code>“, if problem is from this contest, and “<code>NO</code>“ otherwise.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Input-1"><a href="#Input-1" class="headerlink" title="Input"></a>Input</h3><pre><code>Alex_and_broken_contest
+</code></pre><h3 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h3><pre><code>NO
+</code></pre><h3 id="Input-2"><a href="#Input-2" class="headerlink" title="Input"></a>Input</h3><pre><code>NikitaAndString
+</code></pre><h3 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h3><pre><code>YES
+</code></pre><h3 id="Input-3"><a href="#Input-3" class="headerlink" title="Input"></a>Input</h3><pre><code>Danil_and_Olya
+</code></pre><h3 id="Output-3"><a href="#Output-3" class="headerlink" title="Output"></a>Output</h3><pre><code>NO
+</code></pre><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>由于数据不大，枚举起始位置，暴力匹配每个名字即可。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="keyword">char</span> str[<span class="number">1000</span>];</div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span> name[<span class="number">5</span>][<span class="number">10</span>] = &#123;<span class="string">"Danil"</span>, <span class="string">"Olya"</span>, <span class="string">"Slava"</span>, <span class="string">"Ann"</span>, <span class="string">"Nikita"</span>&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>, str);</div><div class="line">	<span class="keyword">int</span> len = <span class="built_in">strlen</span>(str);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(str); i++)</div><div class="line">	&#123;		</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> l1 = <span class="built_in">strlen</span>(name[j]), k;</div><div class="line">			<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; l1; k++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (i + k &gt;= <span class="built_in">strlen</span>(str))</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				<span class="keyword">if</span> (str[i + k] != name[j][k])</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span> (k == l1)</div><div class="line">				sum++;			</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span> (sum == <span class="number">1</span>)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/urumqi-online-A/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【ACM-ICPC2017 Urumqi Online】A. Banana 题解</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 Ke Chang
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				showProcessingMessages: false,
+				tex2jax: {
+					inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+					processEscapes:true
+				},
+				menuSettings: {
+					zoom: "Hover"
+    			}
+			});
+		</script>
+		<script src="//cdn.bootcss.com/mathjax/2.6.0/MathJax.js?config=TeX-AMS_HTML"></script>
+				
+				<!-- jquery form -->
+		<script src="http://pingce.ayyz.cn:8001/js/jquery.form.min.js"></script>		
+
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
