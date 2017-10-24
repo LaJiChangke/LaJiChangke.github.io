@@ -3,23 +3,23 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>【Codeforces Round 442 (Div. 2)】A. Alex and broken contest 题解 | 辣鸡CK的博客</title>
+  <title>【Codeforces Round 442 (Div. 2)】B. Nikita and string 题解 | 辣鸡CK的博客</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目链接http://codeforces.com/contest/877/problem/A 题目大意给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。">
-<meta name="keywords" content="codeforces,字符串">
+  <meta name="description" content="题目链接http://codeforces.com/contest/877/problem/B 题目大意给你一个字符串，你可以选择它的一个子串，满足自己可以分为 $3$ 段，第 $1$ 和 $3$ 段都是 ‘a’">
+<meta name="keywords" content="codeforces,字符串,枚举">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Codeforces Round 442 (Div. 2)】A. Alex and broken contest 题解">
+<meta property="og:title" content="【Codeforces Round 442 (Div. 2)】B. Nikita and string 题解">
 <meta property="og:url" content="http://yoursite.com/CF877-B/index.html">
 <meta property="og:site_name" content="辣鸡CK的博客">
-<meta property="og:description" content="题目链接http://codeforces.com/contest/877/problem/A 题目大意给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。">
-<meta property="og:updated_time" content="2017-10-24T00:59:51.907Z">
+<meta property="og:description" content="题目链接http://codeforces.com/contest/877/problem/B 题目大意给你一个字符串，你可以选择它的一个子串，满足自己可以分为 $3$ 段，第 $1$ 和 $3$ 段都是 ‘a’">
+<meta property="og:updated_time" content="2017-10-24T01:07:40.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Codeforces Round 442 (Div. 2)】A. Alex and broken contest 题解">
-<meta name="twitter:description" content="题目链接http://codeforces.com/contest/877/problem/A 题目大意给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。">
+<meta name="twitter:title" content="【Codeforces Round 442 (Div. 2)】B. Nikita and string 题解">
+<meta name="twitter:description" content="题目链接http://codeforces.com/contest/877/problem/B 题目大意给你一个字符串，你可以选择它的一个子串，满足自己可以分为 $3$ 段，第 $1$ 和 $3$ 段都是 ‘a’">
   
     <link rel="alternative" href="/atom.xml" title="辣鸡CK的博客" type="application/atom+xml">
   
@@ -123,7 +123,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ACM/" style="font-size: 10px;">ACM</a> <a href="/tags/Urumqi/" style="font-size: 10px;">Urumqi</a> <a href="/tags/codeforces/" style="font-size: 20px;">codeforces</a> <a href="/tags/字符串/" style="font-size: 20px;">字符串</a> <a href="/tags/模拟/" style="font-size: 10px;">模拟</a>
+						<a href="/tags/ACM/" style="font-size: 10px;">ACM</a> <a href="/tags/Urumqi/" style="font-size: 10px;">Urumqi</a> <a href="/tags/codeforces/" style="font-size: 20px;">codeforces</a> <a href="/tags/字符串/" style="font-size: 20px;">字符串</a> <a href="/tags/枚举/" style="font-size: 10px;">枚举</a> <a href="/tags/模拟/" style="font-size: 10px;">模拟</a>
 					</div>
 				</section>
 				
@@ -206,7 +206,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      【Codeforces Round 442 (Div. 2)】A. Alex and broken contest 题解
+      【Codeforces Round 442 (Div. 2)】B. Nikita and string 题解
       
     </h1>
   
@@ -216,7 +216,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeforces/">codeforces</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/枚举/">枚举</a></li></ul>
 	</div>
 
         
@@ -228,8 +228,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="http://codeforces.com/contest/877/problem/A" target="_blank" rel="external">http://codeforces.com/contest/877/problem/A</a></p>
-<h1 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h1><p>给你一个字符串和 $5$ 个名字，判断字符串中是否只有一个名字恰好出现一次，其他名字没有出现。</p>
+        <h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="http://codeforces.com/contest/877/problem/B" target="_blank" rel="external">http://codeforces.com/contest/877/problem/B</a></p>
+<h1 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h1><p>给你一个字符串，你可以选择它的一个子串，满足自己可以分为 $3$ 段，第 $1$ 和 $3$ 段都是 ‘a’</p>
 <a id="more"></a>
 <h1 id="题目原文"><a href="#题目原文" class="headerlink" title="题目原文"></a>题目原文</h1><p>One day Alex was creating a contest about his friends, but accidentally deleted it. Fortunately, all the problems were saved, but now he needs to find them among other problems.</p>
 <p>But there are too many problems, to do it manually. Alex asks you to write a program, which will determine if a problem is from this contest by its name.</p>
